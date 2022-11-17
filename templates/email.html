@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Пример отправки сообщений</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<style>
+
+</style>
+<body>
+  <h1 class="container text-left">Оставьте заявку</h1>
+  <div class="container text-left">
+    <div id="form_container">
+      <form enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        <h3 class="text-left"> Отправляется с: <b>{{ DEFAULT_FROM_EMAIL }}</b></h3>
+        <h3><b>1. Вставьте переменные в формате .csv</b></h3>
+        {{ form.to_email_list }}
+        <h3><b>2. Тема</b></h3>
+        {{ form.subject }}
+        <h3><b>3. Вставьте html шаблон в формате .html</b></h3>
+        {{ form.file1 }}
+        <p> </p>
+        <div class="form-actions form-group ">
+          <button type="submit" class="form-control btn btn-success">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

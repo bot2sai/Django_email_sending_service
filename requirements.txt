@@ -1,0 +1,7 @@
+Django==1.11.29
+importlib==1.0.4
+Pillow==6.2.2
+python-http-client==3.3.7
+pytz==2022.6
+sendgrid==6.9.7
+starkbank-ecdsa==2.2.0
