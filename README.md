@@ -1,3 +1,5 @@
+Django небольшой сервис отправки имейл рассылок.
+
 0. В качестве сервиса отправки сообщений был выбран Sendgrid
 1. Внести данные в settings.py DEFAULT_FROM_EMAIL - адресс почты отправителя
 2. Внести данные в settings.py EMAIL_HOST_PASSWORD - APIkey
